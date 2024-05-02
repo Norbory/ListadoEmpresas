@@ -92,7 +92,8 @@ namespace ListadoEmpresas.Controllers
         }
 
         //GET: Buscar empresas por nombre
-        [HttpGet("buscar/{nombre}"), Authorize]
+        // Proximamente se agregara la autenticacion con bearer token
+        [HttpGet("buscar/{nombre}")]
         public async Task<ActionResult<List<Empresa>>> BuscarEmpresas(string nombre)
         {
             try
@@ -130,7 +131,8 @@ namespace ListadoEmpresas.Controllers
         }
         
         // POST: api/Empresa
-        [HttpPost, Authorize]
+        // Proximamente se agregara la autenticacion con bearer token
+        [HttpPost]
         public async Task<ActionResult<List<Empresa>>> CreateEmpresa(Empresa company)
         {
             try
@@ -145,7 +147,8 @@ namespace ListadoEmpresas.Controllers
             }
         }
         // PUT: api/Empresa
-        [HttpPut, Authorize]
+        // Proximamente se agregara la autenticacion con bearer token
+        [HttpPut]
         public async Task<ActionResult<List<Empresa>>> ActualizaEmpresa(Empresa company)
         {
             try
@@ -175,7 +178,8 @@ namespace ListadoEmpresas.Controllers
             }
         }
         // DELETE: api/Empresa
-        [HttpDelete("{id}"), Authorize]
+        // Proximamente se agregara la autenticacion con bearer token
+        [HttpDelete("{id}")]
         public async Task<ActionResult<List<Empresa>>> DeleteEmpresa(int id)
         {
             try
